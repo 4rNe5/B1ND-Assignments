@@ -36,13 +36,14 @@ struct DiaryCell: View {
                 .font(.system(size: 14))
             )
             
-        .padding(10)
+                .padding(.bottom,12)
     }
 }
 
 
 struct DiaryCell_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryCell(title: "2023년 06월 18일 (일)", content: "Good")
+//        DiaryCell(title: "2023년 06월 18일 (일)", content: "Good")
+        MainView()
     }
 }

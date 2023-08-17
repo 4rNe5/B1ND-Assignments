@@ -13,6 +13,7 @@
 		ABA30EE02A8D925D007C9BAE /* DiaryStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA30EDF2A8D925D007C9BAE /* DiaryStruct.swift */; };
 		ABA30EE22A8DEB3A007C9BAE /* HomeLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA30EE12A8DEB3A007C9BAE /* HomeLogoView.swift */; };
 		ABA30EE42A8DEE72007C9BAE /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA30EE32A8DEE72007C9BAE /* WriteView.swift */; };
+		ABA30EE72A8E15AC007C9BAE /* TextAreaCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA30EE62A8E15AC007C9BAE /* TextAreaCode.swift */; };
 		ABC604FD2A8C4B69004F61BB /* BIND_DiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC604FC2A8C4B69004F61BB /* BIND_DiaryApp.swift */; };
 		ABC605012A8C4B6A004F61BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC605002A8C4B6A004F61BB /* Assets.xcassets */; };
 		ABC605042A8C4B6A004F61BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC605032A8C4B6A004F61BB /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		ABA30EE12A8DEB3A007C9BAE /* HomeLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogoView.swift; sourceTree = "<group>"; };
 		ABA30EE32A8DEE72007C9BAE /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		ABA30EE52A8E12C7007C9BAE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ABA30EE62A8E15AC007C9BAE /* TextAreaCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAreaCode.swift; sourceTree = "<group>"; };
 		ABC604F92A8C4B69004F61BB /* BIND-Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BIND-Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC604FC2A8C4B69004F61BB /* BIND_DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIND_DiaryApp.swift; sourceTree = "<group>"; };
 		ABC605002A8C4B6A004F61BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				ABA30EDF2A8D925D007C9BAE /* DiaryStruct.swift */,
 				ABA30ED72A8D8F84007C9BAE /* DiaryCell.swift */,
 				ABA30EDB2A8D908C007C9BAE /* MainView.swift */,
+				ABA30EE62A8E15AC007C9BAE /* TextAreaCode.swift */,
 				ABA30EE32A8DEE72007C9BAE /* WriteView.swift */,
 				ABA30ED52A8D8D33007C9BAE /* LaunchSwiftView.swift */,
 				ABA30EE12A8DEB3A007C9BAE /* HomeLogoView.swift */,
@@ -255,6 +258,7 @@
 				ABA30EDC2A8D908C007C9BAE /* MainView.swift in Sources */,
 				ABC604FD2A8C4B69004F61BB /* BIND_DiaryApp.swift in Sources */,
 				ABA30ED62A8D8D33007C9BAE /* LaunchSwiftView.swift in Sources */,
+				ABA30EE72A8E15AC007C9BAE /* TextAreaCode.swift in Sources */,
 				ABA30EE42A8DEE72007C9BAE /* WriteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

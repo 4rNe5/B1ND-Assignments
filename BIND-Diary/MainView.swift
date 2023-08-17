@@ -19,14 +19,14 @@ struct MainView: View {
                         }
                     }
                 }
-                .padding(.top)
+                .padding(.top,40)
 
                 // 버튼 추가
                 VStack {
                     Spacer()
                     HStack {
                         Spacer()
-                        NavigationLink(destination: LaunchScreenView()) {
+                        NavigationLink(destination: WriteView()) {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
                                 .frame(width: 60, height: 60)
