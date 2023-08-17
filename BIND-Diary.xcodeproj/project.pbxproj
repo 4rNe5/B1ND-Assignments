@@ -42,6 +42,7 @@
 		ABA30EDF2A8D925D007C9BAE /* DiaryStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryStruct.swift; sourceTree = "<group>"; };
 		ABA30EE12A8DEB3A007C9BAE /* HomeLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogoView.swift; sourceTree = "<group>"; };
 		ABA30EE32A8DEE72007C9BAE /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		ABA30EE52A8E12C7007C9BAE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ABC604F92A8C4B69004F61BB /* BIND-Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BIND-Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC604FC2A8C4B69004F61BB /* BIND_DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIND_DiaryApp.swift; sourceTree = "<group>"; };
 		ABC605002A8C4B6A004F61BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		ABC604F02A8C4B69004F61BB = {
 			isa = PBXGroup;
 			children = (
+				ABA30EE52A8E12C7007C9BAE /* README.md */,
 				ABC604FB2A8C4B69004F61BB /* BIND-Diary */,
 				ABC604FA2A8C4B69004F61BB /* Products */,
 			);
