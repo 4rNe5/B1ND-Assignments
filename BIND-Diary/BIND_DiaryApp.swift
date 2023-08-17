@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct BIND_DiaryApp: App {
+    @State private var isLoading = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                if isLoading {
+                    LaunchScreenView()
+                } else {
+                    MainView()
+                }
+            }
+            .onAppear(perform: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    isLoading = false
+                }
+            })
         }
     }
 }
