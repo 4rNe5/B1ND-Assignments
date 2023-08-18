@@ -30,7 +30,7 @@ struct MainView: View {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
                                 .frame(width: 60, height: 60)
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color("BBLUE"))
                                 .padding()
                                 .foregroundColor(Color.white)
                         }
