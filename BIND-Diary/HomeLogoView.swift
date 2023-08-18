@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeLogoView: View {
     var body: some View {
-            RoundedRectangle(cornerRadius: 10)
+            Rectangle()
                 .inset(by: 0.5)
                 .stroke(Color(red: 0.17, green: 0.4, blue: 0.71), lineWidth: 1)
                 .frame(width: 353, height: 92)

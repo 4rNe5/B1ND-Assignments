@@ -1,3 +1,12 @@
+//
+//  WriteView.swift
+//  BIND-Diary
+//
+//  Created by 4rNe5 on 2023/08/17.
+//
+
+
+import RealmSwift
 import SwiftUI
 
 struct WriteView: View {
@@ -17,24 +26,33 @@ struct WriteView: View {
                         
                         Spacer()
                         
-                        HStack {
+                        ZStack(alignment: .leading) {
                             Text("\(nonWhitespaceCharacterCount(string: diaryWriteField)) / 100")
                                 .foregroundColor(Color("BBLACK"))
-                                .padding(.horizontal,13)
-                                .padding(.bottom,11)
+                                .padding(.horizontal, 13)
+                                .padding(.bottom, 11)
                                 .fontWeight(.semibold)
-                            Button(action:{
-                                
-                            }){
-                                Text("완료")
-                                    .foregroundColor(Color("BBLACK"))
+                            
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    
+                                }){
+                                    Text("완료")
+                                        .foregroundColor(Color("WriteViewColor"))
+                                        .padding(.bottom, 11)
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                }
+                                .padding(.trailing, 13)
                             }
                         }
                     }
                 })
-                .padding(.top,20)
+                .padding(.top, 20)
                 Spacer()
         }
+        .background(Color("WriteViewBG"))
+        .foregroundColor(Color("WriteViewBG"))
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -43,7 +61,9 @@ struct WriteView: View {
                 }) {
                     HStack {
                         Image(systemName: "arrow.backward")
-                        Text("뒤로")
+                        Text("일기 쓰기")
+                            .font(.system(size: 20))
+                            .fontWeight(.medium)
                     }
                     .foregroundColor(Color("BBLACK"))
                 }
