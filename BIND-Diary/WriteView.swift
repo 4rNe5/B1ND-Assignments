@@ -1,17 +1,19 @@
-//
-//  WriteView.swift
-//  BIND-Diary
-//
-//  Created by 4rNe5 on 2023/08/17.
-//
-
-
-import RealmSwift
 import SwiftUI
+import RealmSwift
 
 struct WriteView: View {
     @State var diaryWriteField: String = ""
     @Environment(\.presentationMode) var presentationMode // Add this for back navigation
+
+    var realm: Realm
+    
+    init() {
+        do {
+            realm = try Realm()
+        } catch {
+            fatalError("Failed to open Realm: \(error.localizedDescription)")
+        }
+    }
     
     var body: some View {
         VStack {
@@ -36,7 +38,8 @@ struct WriteView: View {
                             HStack {
                                 Spacer()
                                 Button(action: {
-                                    
+                                    saveDiaryEntry()
+                                    presentationMode.wrappedValue.dismiss()
                                 }){
                                     Text("완료")
                                         .foregroundColor(Color("WriteViewColor"))
@@ -57,7 +60,7 @@ struct WriteView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: {
-                    presentationMode.wrappedValue.dismiss() // Add this for back navigation
+                    presentationMode.wrappedValue.dismiss() // For Back Navigation
                 }) {
                     HStack {
                         Image(systemName: "arrow.backward")
@@ -70,7 +73,26 @@ struct WriteView: View {
             }
         }
     }
+
+    private func saveDiaryEntry() {
+        let newEntry = DiaryEntry()
+
+        realm.beginWrite()
+        newEntry.id = (realm.objects(DiaryEntry.self).max(ofProperty: "id") as Int? ?? 0) + 1
+        newEntry.date = formatDateToKorean(date: Date())
+        newEntry.content = diaryWriteField
+        realm.add(newEntry)
+        try? realm.commitWrite()
+    }
+
     
+    private func formatDateToKorean(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 M월 d일 (E)"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        return dateFormatter.string(from: date)
+    }
+
     private func nonWhitespaceCharacterCount(string: String) -> Int {
         return string.unicodeScalars.filter { !CharacterSet.whitespacesAndNewlines.contains($0) }.count
     }
