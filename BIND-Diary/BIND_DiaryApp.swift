@@ -21,7 +21,7 @@ struct BIND_DiaryApp: App {
                 }
             }
             .onAppear(perform: {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
                     isLoading = false
                 }
             })
