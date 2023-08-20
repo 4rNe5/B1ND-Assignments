@@ -1,3 +1,10 @@
+//
+//  TextAreaCode.swift
+//  BIND-Diary
+//
+//  Created by 4rNe5 on 2023/08/17.
+//
+
 import SwiftUI
 
 struct TextArea: UIViewRepresentable {
